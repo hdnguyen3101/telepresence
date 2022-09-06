@@ -1,0 +1,7 @@
+{
+    "service": "cdn",
+    "port_local": "8088",
+    "port_remote": "8080",
+    "http_header": "core",
+    "http_value": "duy"
+}
