@@ -42,7 +42,7 @@ echo. Download the latest windows zip telepresence.exe and dependencies (~50 MB)
 curl -LO https://app.getambassador.io/download/tel2/windows/amd64/latest/telepresence.zip
 
 echo. Unzip the zip file to a suitable directory + cleanup zip
-powershell Expand-Archive -Path telepresence.zip && Remove-Item 'telepresence.zip'
+powershell Expand-Archive -Path telepresence.zip
 cd telepresence
 
 echo It will install telepresence to C:\telepresence by default
