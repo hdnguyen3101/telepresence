@@ -34,7 +34,8 @@ powershell -Command "Invoke-WebRequest https://drive.google.com/u/0/uc?id=1zcglB
 powershell Expand-Archive -Path data-telepresence.zip
 powershell Remove-Item data-telepresence.zip
 cd data-telepresence
-mkdir "%USERPROFILE%/.kube" && copy config "%USERPROFILE%/.kube/config"
+mkdir "%USERPROFILE%/.kube"
+copy config "%USERPROFILE%/.kube/config"
 echo Done! Final step to Install & config Telepresence
 
 echo. Download the latest windows zip telepresence.exe and dependencies (~50 MB):
@@ -46,13 +47,14 @@ powershell Expand-Archive -Path telepresence.zip
 cd telepresence
 
 echo It will install telepresence to C:\telepresence by default
-powershell Set-ExecutionPolicy Bypass -Scope Process
-powershell .\install-telepresence.ps1
+powershell -ExecutionPolicy Bypass -File "install-telepresence.ps1"
+@REM powershell .\install-telepresence.ps1
 
 echo Cleanup Installer
 cd ..
 set TELE=C:\telepresence
-copy telepresence.bat %TELE% && copy data.json %TELE%
+copy telepresence.bat %TELE%
+copy data.json %TELE%
 cd ..
 powershell Remove-Item data-telepresence
 echo All requirement setup done. Press any key to leave this program!
