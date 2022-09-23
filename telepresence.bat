@@ -38,6 +38,7 @@ if errorlevel 1 goto ConnectTelepresence
 :ConnectTelepresence
 color 0A
 telepresence connect
+telepresence login
 echo. Connect successfully!
 echo Press any key to go back main menu...
 pause>nul
