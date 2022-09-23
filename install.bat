@@ -30,7 +30,7 @@ echo.
 echo Your installation is complete. Next step config profile Kubernetes!
 
 echo Configure profile Kubernetes for User Dev
-powershell -Command "Invoke-WebRequest https://drive.google.com/u/0/uc?id=1pXH7mTUHRkeG1MGBxtqFvv4vBwDs6vCf -OutFile data-telepresence.zip"
+powershell -Command "Invoke-WebRequest https://drive.google.com/u/0/uc?id=1gYZHPNK0fjSHRJ0F-7kDeQIyre_-v4cn -OutFile data-telepresence.zip"
 powershell Expand-Archive -Path data-telepresence.zip
 powershell Remove-Item data-telepresence.zip
 cd data-telepresence
