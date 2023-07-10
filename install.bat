@@ -39,8 +39,8 @@ copy config "%USERPROFILE%/.kube/config"
 echo Done! Final step to Install & config Telepresence
 
 echo. Download the latest windows zip telepresence.exe and dependencies (~50 MB):
-@REM powershell -Command "Invoke-WebRequest https://app.getambassador.io/download/tel2/windows/amd64/latest/telepresence.zip -OutFile telepresence.zip"
-curl -LO https://app.getambassador.io/download/tel2/windows/amd64/2.9.5/telepresence.zip
+powershell -Command "Invoke-WebRequest https://app.getambassador.io/download/tel2/windows/amd64/2.7.6/telepresence.zip -OutFile telepresence.zip"
+@REM curl -LO https://app.getambassador.io/download/tel2/windows/amd64/2.7.6/telepresence.zip
 
 echo. Unzip the zip file to a suitable directory + cleanup zip
 powershell Expand-Archive -Path telepresence.zip
